@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* form{text-align:center;} */
+        fieldset{margin: 20px auto; padding:15px 40px 20px 40px; display:block; border: 1px solid #20c;}
+        legend{font-size: 16px; color: #333; text-align: left; padding-right: 20px; letter-spacing: 1px;}
+
+        input:nth-of-type(4){margin-left: 20px;}
+        input:default+label{color: #333;}
+        #input3 input:enabled+label{color: #0c0;}
+        #input3 input:disabled+label{color: #bbb;}
+        #input2 input:checked+label , #input3 input:checked+label{color: #02f;}
+        [class*='aaa']{ text-align: center;}
+    </style>
+</head>
+<body>
+    <form action="abc1.php" id="form1" name="form1" class="aaabbwwfsdg" method="post">
+        <fieldset id="input1">
+            <legend>예제1_default</legend>
+            
+            <input type="checkbox" name="id_save" id="id_save_chk1">
+            <label for="id_save_chk1">아이디저장</label>
+
+            <input type="checkbox" name="auto_save" id="auto_save_chk1">
+            <label for="auto_save_chk1">자동로그인</label>
+
+            <input type="checkbox" name="see_connect" id="see_connect_chk1">
+            <label for="see_connect_chk1">보안접속</label>
+
+            <input type="radio" name="check1" id="travle_chk1" value="여행">
+            <label for="travle_chk1">여행</label>
+            
+            <input type="radio" name="check1" id="exercise_chk1" value="운동">
+            <label for="exercise_chk1">운동</label>
+        </fieldset>
+        
+        <fieldset id="input2">
+            <legend>예제2_default & checked</legend>
+            
+            <input type="checkbox" name="idsave" id="id_save_chk2">
+            <label for="id_save_chk2">아이디저장</label>
+            
+            <input type="checkbox" name="auto_save" id="auto_save_chk2">
+            <label for="auto_save_chk2">자동로그인</label>
+            
+            <input type="checkbox" name="see_connect" id="see_connect_chk2">
+            <label for="see_connect_chk2">보안접속</label>
+            
+            <input type="radio" name="check2" id="travle_chk2" value="여행">
+            <label for="travle_chk2">여행</label>
+            
+            <input type="radio" name="check2" id="exercise_chk2" value="운동">
+            <label for="exercise_chk2">운동</label>
+        </fieldset>
+        
+        <fieldset id="input3">
+            <legend>예제3_enabled disabled</legend>
+            
+            <input type="checkbox" name="idsave" enabled id="id_save_chk3">
+            <label for="id_save_chk3">아이디저장</label>
+            
+            <input type="checkbox" name="auto_save" disabled id="auto_save_chk3">
+            <label for="auto_save_chk3">자동로그인</label>
+            
+            <input type="checkbox" name="see_connect" disabled id="see_connect_chk3">
+            <label for="see_connect_chk3">보안접속</label>
+            
+            <input type="radio" name="check3" id="travle_chk3" enabled  value="여행">
+            <label for="travle_chk3">여행</label>
+            
+            <input type="radio" name="check3" id="exercise_chk3" enabled value="운동">
+            <label for="exercise_chk3">운동</label>
+        </fieldset>
+    </form>
+</body>
+</html>

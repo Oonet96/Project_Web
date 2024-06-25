@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>white-space & word-wrap</title>
+    <style>
+        *{margin: 0;}
+        body{font-size: 15px;color: #555;line-height: 160%; background: #a9a9a5;}
+        #wrap{margin: 50px auto; width: 600px;}
+        #wrap #textBox{ background: #fff;}
+        #wrap #textBox .gap{padding: 50px;}
+        #wrap #textBox .gap h3{font-weight: normal; font-size: 20px; text-align: center; color: #99c;}
+        #wrap #textBox .gap p.text-wrap{width: 100%; line-height: 30px; margin-bottom: 10px; padding: 0 10px;}
+    
+        
+        /* word-wrap: normal - break point에서 줄바꿈한다. */
+        
+        /* break point란? - */
+        /* 사용자들의 스크린 가로 사이즈가 몇 px인지에 따라 보여줄 내용을 변경시키는 지점 */
+        #wrap #textBox .gap p.wrap-normal{word-wrap: normal;}
+        #wrap #textBox .gap p.wrap-break-word{word-wrap: break-word;}
+        #wrap #textBox .gap p.white-space-nowrap{white-space: nowrap;}
+        #wrap #textBox .gap p.white-space-pre{white-space: pre;}
+        #wrap #textBox .gap p.white-space-prewrap{white-space: pre-wrap;}
+        #wrap #textBox .gap p.white-space-preline{white-space: pre-line;}
+        #wrap #textBox .gap p.overflow-hidden{overflow: hidden;}
+        #wrap #textBox .gap p.txt-overflow-ellipsis{text-overflow: ellipsis;}
+
+        /* white-space:normal !단어 단위!로 끊어서 줄바꿈 한다 . (단어 단위로 줄바꿈되어 오른쪽 공간이 꽉차지 않고 비어있는 형태다.)  */
+        /* #wrap #textBox .gap p.white-space-normal{white-space: normal;} */
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="textBox">
+        <div class="gap">
+            <div id="text-wrap">
+                <h3>word-wrap:normal;</h3>
+                <p class="text-wrap wrap-normal overflow-hidden">
+                    LoremIpsumDolorSitAmet,ConsecteturAdipiscingElit,SedDoEiusmodTemporIncididuntUtLaborEtDoloreMagnaAliqua.UtEnimAdMinimVeniam,QuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat.
+                </p>
+                <h3>word-wrap:break-word; overflow:hidden;</h3>
+                <p class="text-wrap wrap-break-word overflow-hidden">
+                    LoremIpsumDolorSitAmet,ConsecteturAdipiscingElit,SedDoEiusmodTemporIncididuntUtLaborEtDoloreMagnaAliqua.UtEnimAdMinimVeniam,QuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat.
+                </p>
+                <h3>word-wrap:normal; overflow:hidden;</h3>
+                <p class="text-wrap wrap-normal overflow-hidden">
+                    문화예술 콘텐츠 시장의 급격한 팽창으로 인해 고객의 욕구는 다양해 졌으며,
+                    사업자 간 경쟁은 심화되었다. 그렇기 때문에 문화예술 마케터는 누구에게
+                    어떻게 홍보 할 것인지에 대한 고민을 반드시 해야 한다. 이를 위해 문화예술
+                    시장을 세분화하기 위한 여러 가지 차원을 파악하고, 이를 바탕으로 가장
+                    적합한 타깃시장을 선정을 할 수 있어야 한다.
+                </p>
+                <h3>white-space:nowrap;</h3>
+                <p class="text-wrap white-space-nowrap">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipisci
+                    ng Elit, Sed Do Eiusmod Tempor Incididunt Ut Lab
+                    ore Et Dolore Magna Aliqua. Ut Enim Ad Minim Ven
+                    iam,Quis Nostrud Exercitation Ullamco Laboris Ni
+                    si Ut Aliquip Ex Ea Commodo Consequat.
+                </p>
+                <h3>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;</h3>
+                <p class="text-wrap white-space-nowrap overflow-hidden txt-overflow-ellipsis">
+                    첫째, NCS 학습모듈은 산업계에서 요구하는 직무능력을 교육훈련 현장에
+                    활용할 수 있도록 성취목표와 학습의 방향을 명확히 제시하는 가이드라인의
+                    역할을 합니다.
+                    둘째, NCS 학습모듈은 특성화고, 마이스터고, 전문대학, 4년제 대학교의
+                    교육기관 및 훈련기관, 직장교육기관 등에서 표준교재로 활용할 수 있으며
+                    교육과정 개편 시에도 유용하게 참고할 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<br><hr><br>
+
+<div id="wrap">
+    <div id="textBox">
+        <div class="gap">
+            <div id="text-wrap">
+                <h3>white-space:pre</h3>
+                <p class="text-wrap white-space-pre">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ipsum natus delectus, reprehenderit suscipit ipsam! Voluptatibus itaque veniam nam blanditiis hic ullam aspernatur soluta commodi, repudiandae doloremque quos sed fugiat.
+                </p>
+                <h3>white-space:pre-wrap</h3>
+                <p class="text-wrap white-space-prewrap">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur modi dolorem consequuntur magnam. Doloribus laboriosam repudiandae alias similique nam nobis quod hic eius ut. Alias sed impedit labore! Accusamus, voluptate?
+                </p>
+                <h3>white-space:pre-line</h3>
+                <p class="text-wrapwhite-space-preline">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, enim. Molestiae quae consequuntur harum minus quod sit reiciendis, rerum natus doloremque quaerat maxime dignissimos deleniti ipsa voluptas animi aperiam odio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

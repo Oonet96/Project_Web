@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            // 여러 텍스트 인자를 각각 처리합니다.
+            texts.forEach(text => {
+                const newLogEntry = document.createElement('div');
+                newLogEntry.textContent = text;
+                logDiv.appendChild(newLogEntry);
+            });
+        }
+        function log2(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // let num10 = 10;
+        // let num20 = 20;
+        // let num03 = 3;
+
+        // 산술연산자
+        // log(num10+num20);
+        // log(num10-num20);
+        // log(num10*num20);
+        // log(num10/num03);
+        // log(num10%num03);
+
+        // 대입연산자 , 복합대입연산자
+        // log(num10);
+        // num10+=5;
+        // log(num10);
+        // num10-=5;
+        // log(num10);
+        // num10*=5;
+        // log(num10);
+        // num10/=5
+        // log(num10);
+        // num10%=5;
+        // log(num10);
+
+        // 증감연산자
+        // let a = 10;
+        // let x = 10;
+        // let b,y;
+
+        // b = a++; // b=a; a=a+1;
+        // log(a,b);
+
+        // y = ++x; // x=x+1; y=x;
+        // log(x,y);
+
+        // log(num10++); //log(num10); num10 = num10 + 1;
+        // log(num10);
+
+        // num20++;
+        // log(num20);
+
+        // 결합연산자
+        // 코드 실행순서는 위에서 아래로, 왼쪽에서 오른쪽으로, 안에서부터 바깥쪽으로 실행이 된다.
+        // log('고양이'+2+3+'마리'); => '고양이'+2+3+'마리' => '고양이2'+3+'마리' 
+        // => '고양이23'+'마리' => '고양이23마리' => log('고양이23마리');
+        // log('고양'+'이');
+        // log('고양이'+2+'마리');
+        // log(2+3+'마리');
+        // log('고양이'+2+3+'마리');
+        // log('고양이'+(2+3)+'마리');
+
+        // 비교연산자
+        // let a = 20;
+        // let b = 10;
+        // let c = '10';
+
+        // log(a > b);
+        // log (b > c);
+        // log(b >= c);
+        // log (b == c);
+        // log(b === c);
+        // log(b != c);
+        // log(b !== c);
+
+        // 논리연산자
+        // let id = 'main';
+        // let pwd = '1234';
+
+        // let userId = 'main';
+        // let userPwd = '1234';
+
+        // let result = (id === userId) && (pwd === userPwd);
+        // log(result);
+
+        // log(id==='main' && pwd==='5678');
+        // log(id==='main' || pwd==='5678');
+        // log(!(id==='main' && pwd==='5678'));
+        // log(!(id==='main' || pwd==='5678'));
+
+        // let classA = prompt('소프트웨어 설계 점수?');
+        // let classB = prompt('소프트웨어 개발 점수?');
+        // let classC = prompt('프로그램 언어활용 점수?');
+        // let classD = prompt('정보시스템구축관리 점수?');
+
+        // // 평균 60 과락 40
+        // let resultA = (Number(classA) >= 40)
+        // let resultB = (Number(classB) >= 40)
+        // let resultC = (Number(classC) >= 40)
+        // let resultD = (Number(classD) >= 40)
+
+        // let avgResult = (classA + classB + classC + classD)/4 >= 60;
+
+        // log("합격: ",resultA && resultB && resultC && resultD && avgResult);
+        
+        // 대출 - 
+        // 나이 20이상, 자산 100원이상은 50원까지 가능, 200원이상은 100원까지 가능
+        // prompt로 나이, 자산, 희망대출금액 입력받아서 대출 승인여부 판단 코드
+
+        // let age = prompt('나이');
+        // let haveMoney = prompt('자산');
+        // let wantMoney = prompt('희망대출금액');
+
+        // let result1 = age>=20 && haveMoney>=100; //대출 기본 조건
+        // let result2 = haveMoney<200 && wantMoney<=50; //대출 조건 100원이상
+        // let result3 = haveMoney>=200 && wantMoney<=100; //대출 조건 200원이상
+        // log('대출승인여부: ',result1 && (result2 || result3));
+
+        // 삼항연산자 ?
+        
+    </script>
+</body>
+</html>

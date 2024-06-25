@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin & padding / text-align & writing-mode</title>
+    <style>
+        *{margin:0;}
+        body{font-size: 16px; line-height: 170%; color: #555; background: #e9e9e9;}
+        h1{text-align: center;}
+        #wrap{width: 100%;}
+        #wrap #textBox{width: 100%; max-width: 1000px; margin: 0 auto;}
+        #wrap #textBox .gap{padding: 20px;}
+        #wrap #textBox .gap .text-wrap{width: 100%; margin:20px 0; background: #fff;}
+        #wrap #textBox .gap .text-wrap h3{padding: 10px; text-align: center;}
+        #wrap #textBox .gap .text-wrap p{padding: 20px;}
+        
+        /* text-align */
+        .align-left{text-align: left;}
+        .align-right{text-align: right;}
+        .align-center{text-align: center;}
+        .align-justify{text-align: justify;}
+
+        /* writing-mode */
+        .writting-ver-lr{writing-mode: vertical-lr;}
+        .writting-ver-rl{writing-mode: vertical-rl;}
+        .writting-hor-tb{writing-mode: horizontal-tb;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="textBox">
+            <div class="gap">
+                <h1>TEXT-ALIGN</h1><br>
+                <div class="text-wrap align-left">
+                    <h3>text-align:left;</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus pariatur laudantium alias, rerum sint dolorum in magni, itaque, excepturi quae culpa aut minima dolor eveniet inventore accusamus? Laborum, asperiores consequatur!</p>
+                </div>
+                <div class="text-wrap align-right">
+                    <h3>text-align:right;</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto beatae inventore sed distinctio ea, animi vel eius voluptate earum rem at optio delectus perspiciatis enim sunt praesentium quaerat magnam. Illum.</p>
+                </div>
+                <div class="text-wrap align-center">
+                    <h3>text-align:center;</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti provident possimus rerum suscipit tempora doloribus quos impedit, et assumenda similique facere nulla debitis natus obcaecati, dolorem vero corrupti ut magni?</p>
+                </div>
+                <div class="text-wrap align-justify">
+                    <h3>text-align:justify;</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis dolorum vero fuga aspernatur ullam, accusantium sapiente omnis. Architecto natus sit amet impedit incidunt dicta accusantium ipsum quasi veniam! Culpa, labore!</p>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <h1>WRITING-MODE</h1><br>
+                <div class="text-wrap align-justify">
+                    <h3>writing-mode:vertical-lr</h3>
+                    <p class="writting-ver-lr">나랏말싸미 듕귁에 달아 문자와로 서르 사맛디 아니할쎄
+                        이런 젼차로 어린 백셩이 니르고져 홀 배 이셔도
+                        마참내 제 뜨들 시러펴디 몯 할 노미 하니라
+                        내 이랄 위하야 어엿비 너겨 새로 스믈 여듧 짜랄 맹가노니
+                        사람마다 해여 수비 니겨 날로 쑤메 뼌한킈 하고져 할따라미니라
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ea voluptatibus nesciunt. Magni numquam, dicta earum doloribus ipsam, accusantium mollitia beatae esse maxime voluptatum optio blanditiis aliquam id recusandae? Error?</p>
+                </div>
+                <div class="text-wrap align-justify">
+                    <h3>writing-mode:vertical-rl</h3>
+                    <p class="writting-ver-rl">나랏말싸미 듕귁에 달아 문자와로 서르 사맛디 아니할쎄
+                        이런 젼차로 어린 백셩이 니르고져 홀 배 이셔도
+                        마참내 제 뜨들 시러펴디 몯 할 노미 하니라
+                        내 이랄 위하야 어엿비 너겨 새로 스믈 여듧 짜랄 맹가노니
+                        사람마다 해여 수비 니겨 날로 쑤메 뼌한킈 하고져 할따라미니라
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores asperiores harum consequuntur! Ea, molestiae. Ipsum quas sint ea perspiciatis, deserunt laboriosam doloribus voluptates dolores optio, earum, et dolorem reiciendis?</p>
+                </div>
+                <div class="text-wrap align-justify">
+                    <h3>writing-mode:horizontal-tb</h3>
+                    <p class="writting-hor-tb">나랏말싸미 듕귁에 달아 문자와로 서르 사맛디 아니할쎄
+                        이런 젼차로 어린 백셩이 니르고져 홀 배 이셔도
+                        마참내 제 뜨들 시러펴디 몯 할 노미 하니라
+                        내 이랄 위하야 어엿비 너겨 새로 스믈 여듧 짜랄 맹가노니
+                        사람마다 해여 수비 니겨 날로 쑤메 뼌한킈 하고져 할따라미니라
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corporis tempore temporibus inventore debitis! Cupiditate facilis, vitae iste, debitis qui voluptate magnam ratione beatae illo unde necessitatibus alias sit! Alias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

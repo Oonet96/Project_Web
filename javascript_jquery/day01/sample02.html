@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function writeln(...texts){
+            const logDiv = document.getElementById('log');
+            // 여러 텍스트 인자를 각각 처리합니다.
+            texts.forEach(text => {
+                const newLogEntry = document.createElement('div');
+                newLogEntry.textContent = text;
+                logDiv.appendChild(newLogEntry);
+            });
+        }
+        function writeln2(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+
+        function setIdOrClass(text, bool=true){
+            let idStr ="id=\"";
+            let classStr="class=\"";
+            let str ="";
+            text+="\"";
+            if(bool)
+                str=idStr+text;
+            else
+                str=classStr+text;
+            
+            return str;
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // let sum01 =3;
+        // let sum02=5;
+        // let sum03='설악산';
+        // writeln2(sum01,sum02,sum03);
+        
+        // let num01=3;
+        // let num02=5;
+        // let num03="라벤더";
+        // writeln2(num01+num02, num03);
+        // writeln2(num03+sum03);
+
+        // let sum01 = 123;
+        // sum01 = 234;
+        // writeln(sum01);
+        // sum01+=123
+        // writeln2(sum01);
+
+        // let sum02;
+        // console.log(sum02);
+
+        // sum02 = 456;
+        // writeln2(sum02);
+
+        // let sum01;
+        // console.log(sum01); //undefined
+        // console.log(same); //Uncaught ReferenceError ReferenceError: same is not defined
+    
+        // sum01=456;
+        // console.log(sum01);
+
+        // const my=5;
+        // writeln(my);
+
+        // function logScope(){
+        //     let local =2;
+        //     if(local){
+        //         local = '다른값'
+        //         writeln2('블럭안 : ',local);
+        //     }
+        //     writeln2("local :",local);
+        // }
+        
+        // logScope();
+
+        // function logScope(){
+        //     let local =2;
+        //     if(local){
+        //         var local2 = '다른값'
+        //         writeln2('블럭안 : ',local2);
+        //     }
+        //     writeln2("local :",local2);
+        // }
+        
+        // logScope();
+
+        // let num = -3.141592;
+        // let str="welcome";
+        // let bool =true;
+        // let no = null;
+        // let some;
+
+        
+        // writeln2(typeof num);
+        // writeln2(typeof str);
+        // writeln2(typeof bool);
+        // writeln2(typeof no);
+        // writeln2(typeof some);
+        
+
+        // let hn01="<h1>welcome</h1>";
+        // document.write(hn01);
+        // document.write("지리산");
+        // document.write("<p "+setIdOrClass("main",false)+">문자열데이터 </p>")
+
+        // let a=5;
+        // let b=4;
+        // let sum= a+b;
+        // writeln2(sum);
+        // let str ="1234"; 
+        // let iStr =Number(str);
+        // writeln2(str+1);
+        // writeln2(iStr+1);
+
+    </script>
+</body>
+</html>

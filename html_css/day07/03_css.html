@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function confirm(){
+            var ele = document.getElementsByName("checkbox");
+            var str = '';
+            for(i=0;i<ele.length;i++){
+                
+            }
+            alert(str+"예매 하였습니다.")
+        }
+    </script>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        body{ background: black;}
+        
+        #screen_window{
+            width: 480px;
+            height: 100px;
+            line-height: 100px;
+            margin: 0 auto;
+            background: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* #chair_window{
+            
+        } */
+
+        #chair_window #chair_box form{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #aaa;
+        }
+        #chair_window #chair_box input[id*=chk]{ display : none;}
+        
+        #chair_window #chair_box label{ 
+            display: block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            margin: 10px 30px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            float:left;
+            text-align: center;
+        }
+
+        #chair_box input:checked + label{
+            background: black;
+            color: #fff;
+        }
+
+        #chair_box input:hover + label{
+            background: #777;
+            color: #fff;
+        }
+
+        #chair_box #btn_box{
+            width: 800px;
+            height: 30px;
+            margin-top: 30px;
+            float: left;
+        }
+        #chair_box #btn_confirm{
+            display: block;
+            width: 150px;
+            height: 30px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="screen_window"><strong>SCREEN</strong></div>
+    <div id="chair_window">
+        <div id="chair_box">
+            <form action="#" method="get" target="_self">
+                <input type="checkbox" name="checkbox" id="chk1">
+                <label for="chk1">1</label>
+                
+                <input type="checkbox" name="checkbox" id="chk2">
+                <label for="chk2">2</label>
+                
+                <input type="checkbox" name="checkbox" id="chk3">
+                <label for="chk3">3</label>
+                
+                <input type="checkbox" name="checkbox" id="chk4">
+                <label for="chk4">4</label>
+                
+                <input type="checkbox" name="checkbox" id="chk5">
+                <label for="chk5">5</label>
+                
+                <input type="checkbox" name="checkbox" id="chk6">
+                <label for="chk6">6</label>
+                
+                <input type="checkbox" name="checkbox" id="chk7">
+                <label for="chk7">7</label>
+                
+                <input type="checkbox" name="checkbox" id="chk8">
+                <label for="chk8">8</label>
+                
+                <input type="checkbox" name="checkbox" id="chk9">
+                <label for="chk9">9</label>
+                
+                <input type="checkbox" name="checkbox" id="chk10">
+                <label for="chk10">10</label>
+
+                <input type="checkbox" name="checkbox" id="chk11">
+                <label for="chk11">11</label>
+                
+                <input type="checkbox" name="checkbox" id="chk12">
+                <label for="chk12">12</label>
+                
+                <input type="checkbox" name="checkbox" id="chk13">
+                <label for="chk13">13</label>
+                
+                <input type="checkbox" name="checkbox" id="chk14">
+                <label for="chk14">14</label>
+                
+                <input type="checkbox" name="checkbox" id="chk15">
+                <label for="chk15">15</label>
+                
+                <input type="checkbox" name="checkbox" id="chk16">
+                <label for="chk16">16</label>
+                
+                <input type="checkbox" name="checkbox" id="chk17">
+                <label for="chk17">17</label>
+                
+                <input type="checkbox" name="checkbox" id="chk18">
+                <label for="chk18">18</label>
+                
+                <input type="checkbox" name="checkbox" id="chk19">
+                <label for="chk19">19</label>
+
+                <input type="checkbox" name="checkbox" id="chk20">
+                <label for="chk20">20</label>
+
+                <div id="btn_box"><input type="button" id="btn_confirm" value="예매하기" onclick="javascript:confirm()" ></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

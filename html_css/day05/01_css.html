@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-decoration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        #text-box{
+            font-size: 14px;width: 400px;margin: 0 auto;
+        }
+        h2{font-size: 25px; text-align: center;}
+        h3{font-size: 22px;text-align: center;}
+        .text{
+            font-family: "Nanum Gothic", sans-serif;
+            src:url('.fonts/NanumGOthic.eot');
+        }
+        .underline{
+            text-decoration: underline;
+        }
+        .overline{
+            text-decoration: overline;
+        }
+        .underline , .overline{
+            text-decoration: overline underline;
+        }
+        .linethrough{
+            text-decoration: line-through;
+        }
+        .none{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>텍스트 데코레이션</h2>
+    <div id="text-box">
+        <div class="text underline">
+            <h3>underline</h3>
+        </div>
+        <div class="text overline">
+            <h3>overline</h3>
+        </div>
+        <div class="text underline overline">
+            <h3>underline/overline</h3>
+        </div>
+        <div class="text linethrough">
+            <h3>linethrough</h3>
+        </div>
+        <div class="text none">
+            <h3>none</h3>
+        </div>
+    </div>
+</body>
+</html>

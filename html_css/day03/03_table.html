@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table{
+            width: 400px;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px solid;
+            background-color: #AAA;
+            text-align: center;
+        }
+        td
+        {
+            border: 1px solid;
+            padding: 10px;
+        }
+        .location{
+            width: 40%;
+            text-align: center;
+        }
+        .work{
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>구분</th>
+                <th>업무</th>
+            </tr>
+            <tr>
+                <td class="location" rowspan="2">회사</td>
+                <td class="work">보고서 작성</td>
+            </tr>
+            <tr>
+                <td class="work">창고정리</td>
+            </tr>
+            <tr>
+                <td class="location" rowspan="2">집</td>
+                <td class="work">화장실청소</td>
+            </tr>
+            <tr>
+                <td class="work">음쓰버리기</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

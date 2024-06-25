@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline_tag</title>
+    <style>
+        #a0::first-line{
+            color: red;
+        }
+    </style>
+    <script>
+        function func(){
+            alert('자바스크립트 호출됨');
+        }
+    </script>
+</head>
+<body>
+    <!-- anchor_tag 예시 -->
+    <p><a href="http://www.naver.com"><img src="./image/naver.png" alt=""></a></p>
+    <p><a href="#a0">a0</a></p>
+    <p><a href="#a1">a1</a></p>
+    <p><a href="#a2">a2</a></p>
+    <p><a href="#a3">a3</a></p>
+    <p><a href="#a4">a4</a></p>
+    <p><a href="#a5">a5</a></p>
+    <p><a href="#a6">a6</a></p>
+    <p><a href="#a7">a7</a></p>
+    <p><a href="#a8">a8</a></p>
+    <p id="a0">a0 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus saepe, dolore soluta sapiente omnis, amet consequuntur ratione perspiciatis libero, quis aut perferendis quasi nisi et deserunt quidem ullam. Beatae.</p>
+    <p id="a1">a1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi earum non labore nihil veniam aspernatur, rem iure voluptates, consectetur eveniet culpa, corporis incidunt voluptate sint repellendus suscipit deleniti ipsa distinctio?</p>
+    <p id="a2">a2 Veritatis vitae dolore at nemo porro quae neque, itaque iure tenetur obcaecati labore inventore explicabo veniam rem dolorum nesciunt laudantium. Voluptatibus tempore placeat repellendus veniam explicabo ratione blanditiis vel incidunt!</p>
+    <p id="a3">a3 Pariatur porro quasi at ipsum consequatur magnam minus facilis unde, asperiores ab tempora corrupti quos error nemo natus eaque velit doloribus quisquam, repellendus nostrum voluptate! Aliquam error adipisci nesciunt perferendis.</p>
+    <p id="a4">a4 Itaque tempora pariatur vitae tempore, nesciunt fuga a ab quos maxime, ipsam consequuntur aliquam minima illo neque? Dicta cumque tempora cupiditate fugiat ipsam. Neque possimus quo, optio nemo pariatur dignissimos.</p>
+    <p id="a5">a5 Minus maxime consequuntur repudiandae! Iusto fugit culpa tempora nemo fuga eius dignissimos architecto dolore ipsum consequuntur animi, iure distinctio inventore. Iusto consectetur laboriosam similique repellendus, eos voluptatum nam sit quidem.</p>
+    <p id="a6">a6 Error eaque nam perspiciatis, voluptatem necessitatibus tempore earum cum aperiam labore quisquam odit provident nisi illo vitae cupiditate quam dicta corrupti in! Esse assumenda perferendis commodi nemo distinctio, non molestias!</p>
+    <p id="a7">a7 Rerum quibusdam corporis voluptates vitae reprehenderit. Cupiditate impedit esse cumque facere at laboriosam rerum ipsam minus, optio adipisci quos. Omnis molestiae ratione numquam obcaecati adipisci molestias eos accusantium ex recusandae.</p>
+    <p id="a8">a8 Blanditiis laborum, nihil cupiditate dolore aperiam, totam incidunt quaerat consectetur ut similique aut veniam eius asperiores consequuntur. At dignissimos odit temporibus assumenda numquam accusantium ab fuga aut necessitatibus illum! Sequi?</p>
+
+    <br><hr>
+    <!-- 함수호출 -->
+    <p><a href="javascript: alert('클릭이벤트!');">Click Me!</a></p>
+    <p><a href="javascript:func()">Func!</a></p>
+
+    <br>
+    <hr>
+    <!-- abbr(abbreviation), dfn(definition) - toolTip -->
+    <abbr title="abbr 강아지 강아지 객bbbbbbb">강아지</abbr>
+    <br>
+    <dfn title="dfn 망아지 망아지 aaaaaa">망아지</dfn>
+
+    <br>
+    <hr>
+
+    <!--bdo(Bi-Directional Override) - rtl , ltr -->
+    <p><bdo dir="rtl">똥해물과백두산이aaaaaaaaaaaaaa</bdo></p>
+    <p><bdo dir="ltr">똥해물과백두산이</bdo></p>
+    
+    <br>
+    <hr>
+
+    <button><a href="javascript: alert('클릭이벤트!');" style="text-decoration-line : none;">빠튼</a></button>
+    
+    <br>
+    <hr>
+
+    <p>This is Book</p>
+    <p>This <code>is</code> Book</p>
+    <p>XXXX XX XXXX</p>
+
+    <br>
+    <hr>
+    <p><img src="html_css/image/naver.png" alt="image not found" width="300", height="auto"></p>
+    <p><img src="html_css/image/naver.png" alt="image not found" width="300", height="500"></p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>text-transform</title>
+    <style>
+        * {margin:0;}
+        body {font-size:15px;color:#555;line-height:160%;background:#f9f9f5;}
+        #wrap {margin:50px auto;width:1000px;}
+        #wrap #textBox {background:#fff;}
+        #wrap #textBox .gap {padding:50px;}
+        #wrap #textBox .gap h3 {font-weight:normal;font-size:20px;text-align:center;color:#99c;}
+        #wrap #textBox .gap p {width:100%;line-height:160%;margin-bottom:10px;padding:0 10px;}
+        
+        /* text-transform */
+        #wrap #textBox .gap p.trans-upper {text-transform:uppercase;}
+        #wrap #textBox .gap p.trans-lower {text-transform:lowercase;}
+        #wrap #textBox .gap p.trans-capital {text-transform:capitalize;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="textBox">
+        <div class="gap">
+            <div id="text-wrap">
+                <h3>텍스트 영문 대소문자 변환 text-transform:uppercase;</h3>
+                <p class="trans-upper">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
+                    Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    Ut Enim Ad Minim Veniam,Quis Nostrud Exercitation Ullamco
+                    Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                </p>
+                <br>
+                <h3>텍스트 영문 소문자 변환 text-transform:lowercase;</h3>
+                <p class="trans-lower">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit,
+                    Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+                    Ut Enim Ad Minim Veniam,Quis Nostrud Exercitation Ullamco
+                    Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                </p>
+                <br>
+                <h3>텍스트 영문 단어 첫 글자 대문자 변환 text-transform:capitalize;</h3>
+                <p class="trans-capital">
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>     

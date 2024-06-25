@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transiotion-time-function</title>
+    <style>
+        .graph{width: 620px; border: 1px solid black;}
+        .bar{
+            width: 10px; height: 50px;
+            background-color: orange;
+            margin: 5px;
+            transition-delay: 0s;
+            transition-duration: 3.5s;
+        }
+
+        .linear{
+            transition-timing-function: linear;
+        }
+        .ease{
+            transition-timing-function: ease;
+        }
+        .ease-in{
+            transition-timing-function: ease-in;
+        }
+        .ease-out{
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out{
+            transition-timing-function: ease-in-out;
+        }
+        .cubic-bezier{
+            transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        /* Hover */
+        .graph:hover>.bar{width: 600px;}
+
+    </style>
+</head>
+<body>
+        <div class="graph">
+            <div class="bar linear"></div>
+            <div class="bar ease"></div>
+            <div class="bar ease-in"></div>
+            <div class="bar ease-out"></div>
+            <div class="bar ease-in-out"></div>
+            <div class="bar cubic-bezier"></div>
+        </div>
+
+</body>
+</html>

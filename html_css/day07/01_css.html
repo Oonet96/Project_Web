@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    <title>Practice</title>
+    
+    <style>
+        *{margin: 0; padding: 0; font-family: 'Times New Roman', Times, serif;}
+        body{background: #aaa;}
+        #page_background{width:85%; margin: 30px auto; background: #fff; overflow: hidden;}
+        #main_page{margin: 20px auto;}
+
+        /* Header */
+        #header_window{
+            width: 960px; height: 160px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #header_window .h-title-box{
+            position:absolute;
+            left: 25px;
+            top: 25px;
+        }
+
+        #header_window .h-nav-u-box{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #header_window .h-nav-b-box{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .nav-tab li{
+            list-style: none;
+            float: left;
+            border: 1px solid black;
+        }
+
+        .h-nav-u-box li{
+            font-size: 14px;
+            padding: 2px;
+        }
+
+        .h-nav-b-box li{
+            font-size: 18px;
+            padding: 2px 10px;
+        }
+
+        .nav-tab li:first-child{ border-radius: 20% 0 0 20%;}
+        .nav-tab li:last-child{ border-radius: 0 20% 20% 0;}
+
+        .nav-tab li:hover{background: black; color: white;}
+        /* Header */
+
+        /* Content */
+        #content_window{
+            width: 960px;
+            margin: 0 auto;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        #content_window .c-section-box{
+            width: 750px;
+            float: left;
+        }
+
+        .c-section-box .section-text{
+            border: 1px solid black;
+            margin-bottom: 10px;
+            min-height: 180px;
+            padding: 10px;
+        }
+
+        /* side box */
+        #content_window .c-side-box{
+            width: 200px;
+            float: right;
+        }
+
+        .c-side-box .side-tab-radio1 ,.c-side-box .side-tab-radio2{display: none;}
+
+        .c-side-box .side-tab{
+            overflow: hidden;
+        }
+
+        .side-tab-list-box li{
+            height: px;
+            list-style: none;
+            border: 1px solid black;
+            padding: 10px;
+            overflow: hidden;
+        }
+        
+        .side-tab-list-box .thumbnail{
+            float: left;
+        }
+
+        .side-tab-list-box .description{
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description > strong{
+            display: block;
+            width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* side tab btn no-checked */
+        .side-tab label{
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+            float: left;
+            border: 1px solid black;
+            background: black;
+            color: #fff;
+            text-align: center;
+        }
+
+        .c-side-box .side-tab-radio1 ~ .side-tab-list-box>.item-list1{
+            display: none;
+        }
+        .c-side-box .side-tab-radio2 ~ .side-tab-list-box>.item-list2{
+            display: none;
+        }
+        /* side tab btn no-checked */
+
+
+        /* side tab btn checked */
+        .c-side-box .side-tab-radio1:checked ~ .side-tab>.tab-btn1{
+            background: #fff; color: black; 
+        }
+        .c-side-box .side-tab-radio1:checked ~ .side-tab-list-box>.item-list1{
+            display: block;
+        }
+
+        /* .c-side-box .side-tab-radio1:checked ~ .side-tab-list-box>ul:nth-of-type(1){
+            display: block;
+        } */
+
+        .c-side-box .side-tab-radio2:checked ~ .side-tab>.tab-btn2{
+            background: #fff; color: black; 
+        }
+        .c-side-box .side-tab-radio2:checked ~ .side-tab-list-box>.item-list2{
+            display: block;
+        }
+
+        /* .c-side-box .side-tab-radio2:checked ~ .side-tab-list-box> ul:nth-of-type(2){
+            display: block;
+        } */
+
+        /* side tab btn checked */
+
+        /* side box */
+
+        /* Content */
+
+        /* Footer */
+
+        #footer_window{
+            width: 960px;
+            margin: 0 auto;
+            padding: 10px 0;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        /* Footer */
+    </style>
+</head>
+<body>
+    <div id="page_background">
+
+        <div id="main_page">
+
+            <div id="header_window">
+
+                <div class="h-title-box">
+                    <h1>Rint Devleopment</h1>
+                    <h2>HTML5 + CSS3 Basic</h2>
+                </div>
+
+                <div class="h-nav-u-box">
+                    <ul class="nav-tab">
+                        <li class="tab-btn1">Web</li>
+                        <li class="tab-btn2">Moblie</li>
+                        <li class="tab-btn3">Game</li>
+                        <li class="tab-btn4">Simulation</li>
+                        <li class="tab-btn5">Data</li>
+                    </ul>
+                </div>
+
+                <div class="h-nav-b-box">
+                    <ul class="nav-tab">
+                        <li class="tab-btn1">HTML5</li>
+                        <li class="tab-btn2">CSS3</li>
+                        <li class="tab-btn3">JavaScript</li>
+                        <li class="tab-btn4">jQuery</li>
+                        <li class="tab-btn5">Node.js</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div id="content_window">
+
+                <div class="c-section-box">
+                    <div class="section-text">
+                        <h3>Main Article</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod consectetur incidunt ipsam similique molestiae et iusto fugit animi rerum optio repellendus voluptatibus facere tempora eius doloribus debitis, culpa beatae perspiciatis.</p>
+                    </div>
+                    <div class="section-text">
+                        <h3>Main Article</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur numquam debitis autem totam! Nisi maiores suscipit, autem aliquam dolor magni officia, ipsum qui aut et natus quibusdam ipsam vero sint.</p>
+                    </div>
+                    <div class="section-text">
+                        <h3>Main Article</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum, pariatur doloribus aliquam debitis inventore, sed incidunt eveniet ea nulla, itaque ducimus! Deserunt maiores suscipit tenetur soluta dolorem reprehenderit repudiandae.</p>
+                    </div>
+                </div>
+
+                <div class="c-side-box">
+                    <input type="radio" name="tab" id="first" class="side-tab-radio1" checked>
+                    <input type="radio" name="tab" id="second" class="side-tab-radio2">
+                    
+                    <div class="side-tab">
+                        <label for="first" class="tab-btn1">HTML</label>
+                        <label for="second" class="tab-btn2">CSS</label>
+                    </div>
+
+                    <div class="side-tab-list-box">
+                        <ul class="item-list1">
+                            <li class="item1">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>HTML5 Canvas</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item2">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>HTML5 Audio</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item3">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>HTML5 Video</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item4">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>HTML5 Semantic Web</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="item-list2">
+                            <li class="item1">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>CSS3 Transition</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item2">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>CSS3 Animation</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item3">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>CSS3 Border</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                            <li class="item4">
+                                <img src="http://placehold.it/45" alt="" class="thumbnail">
+                                <div class="description">
+                                    <strong>CSS3 Box</strong>
+                                    <p>2012-03-15</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer_window">
+                <h3>HTML5 + CSS3 Basic</h3>
+                <i>Website Layout Basic</i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

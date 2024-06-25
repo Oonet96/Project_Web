@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas_box {width: 500px; height: 400px; border: 1px solid #ccc;}
+    </style>
+   
+</head>
+<body>
+    <canvas id='canvas_box'>
+        캔버스를 지원하지 않는 브라우저입니다.
+    </canvas>
+    
+    <script>
+        var canvas = document.getElementById('canvas_box');
+        var con = canvas.getContext('2d');
+        con.fillStyle = 'blue';
+        con.fillRect(20,20,100,100);
+
+        // con.moveTo(100,100);
+        // con.lineto(150,100);
+        // con.strokeStyle ="black";
+        // con.stroke();
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_tag</title>
+    <style>
+        div{
+            height: 50px;
+        }
+    </style>
+    <script>
+        function func2(){
+            var ele = document.getElementById('kkk');
+            ele.value = '호랑이';
+        }
+
+        function func3(){
+            var ele = document.getElementById('fsubmit');
+            ele.value = '호랑이';
+        }
+
+        function func4(){
+            var ele = document.getElementsByName('form_fcheckbox');
+            var len = ele.length;
+            if(len>0 && ele[0].getAttribute('type')=='checkbox'){
+                var str = '';
+                for(i=0;i<len;i++){
+                    if(ele[i].checked)
+                        str+=ele[i].value;
+                }
+                alert(str);
+            }
+            else{
+                alert('wrong');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+    text
+    label
+    checkbox(radio button)
+    select
+    calendar
+    color box
+    button
+    -->
+    <!-- form의 atribute -->
+    <!-- target , method(post,get) , action  -->
+    <!-- fieldset 폼요소를 그룹으로 묶는 태그 -->
+    <!-- legend 그룹으로 묶는 구역에 제목을 붙이는 태그 -->
+    <!-- label input 태그와 같은 폼 요소에 레이블을 붙일 때 사용 -->
+<form action="#" method="get" target="_self">
+    <div><input type="text" id="fsubmit" name="fsubmit" value=""></div>
+    <div><input type="text" id="kkk" name="fsubmit" placeholder="힣히히"></div>
+    <div><a href="javascript:func2()">으악</a></div>
+
+    <br>
+    <hr>
+
+    <div><input type="button" id="btn" value="중복확인" onclick="javascript:func3()"></div>
+
+    <br>
+    <hr>
+
+    <div>
+        <input type="checkbox" name="form_fcheckbox" id="fcheckbox_g" value="golf"><label for="fcheckbox_g">골프</label>
+        <input type="checkbox" name="form_fcheckbox" id="fcheckbox_f" value="football"><label for="fcheckbox_f">축구</label>
+        <input type="checkbox" name="form_fcheckbox" id="fcheckbox_b" value="baseball"><label for="fcheckbox_b">야구</label>
+        <input type="checkbox" name="form_fcheckbox" id="fcheckbox_t" value="tabletennis"><label for="fcheckbox_t">탁구</label>
+        <input type="button" id="btn_denine" value="안대요" onclick="javascript:func4()">
+    </div>
+    
+    <br>
+    <hr>
+
+    <div><input type="color" name="" id="" value="#ff0000"></div>
+
+    <div>
+        <input type="date" name="" id="" value="2024-06-11">
+        <br>
+        <input type="datetime-local" name="" id="" value="2024-06-11 13:20:33">
+    </div>
+    
+    <br>
+    <hr>
+
+    <div><input type="file" name="" id="" accept=".txt,.exe"></div>
+    <div><input type="hidden" name=""></div>
+    <!-- 히든 사용법  -->
+     <!-- 리스트 상세 페이지 수정 삭제할떄 해당 리스트 고유식별자 저장 -->
+
+     <!-- input:image와 img의 차이 input은 클릭가능함 -->
+
+     <div><input type="password" name="" id="" placeholder="password"></div>
+
+     <br><hr>
+
+     <div>
+        <input type="radio" name="a" id="" checked>
+        <input type="radio" name="a" id="">
+    </div>
+
+    <div><input type="range" name="" id="" min="0" max="999" value="332"></div>
+    <div><input type="reset" value="초기화"></div>
+    <div><input type="search" name="" id=""></div>
+    <div><input type="submit" value="히히 못가"></div>
+    <div><input type="tel" name="" id=""></div>
+    <div><input type="time" name="" id=""></div>
+    <div><input type="week" name="" id=""></div>
+    <div><input type="url" name="" id=""></div>
+
+    <br><hr>
+
+    <img src="./image/lastdinner.png" alt="" width="300px" usemap="#testmap">
+    <map name="testmap">
+        <area shape="rect" coords="0,0,20,20" href="https://www.naver.com" alt="">
+        <area shape="rect" coords="280,0,300,20" href="https://www.daum.net" alt="">
+    </map>
+
+    <!-- 윈도우좌표계 좌측상단이 0,0 경우에 따라서 y,x로 표기되기도 함-->
+    <!-- 데카르트좌표계 좌측하단이 0,0-->
+</form>
+</body>
+</html>

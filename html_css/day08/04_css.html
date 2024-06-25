@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        
+    </script>
+    
+    <style>
+        *{margin: 0; padding: 0;}
+        body{font-family: 'Helvertica , sans-serif';}
+        li{list-style: none;}
+        a{text-decoration: none;}
+    </style>
+    
+    <style>
+        #main_header{
+            height: 45px;
+            line-height: 45px;
+
+
+            background: url('./images/header_background.png');
+            position: relative;
+            text-align: center;
+        }
+
+        #main_header>h1{
+            color: white;
+        }
+
+        #main_header>a , #main_header>label{
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left{
+            width: 62px; left: 5px; top: 7px;
+            background: url(./images/sprites.png);
+            text-indent: -99999px;
+        }
+
+        #main_header>label.right{
+            width: 32px; right: 5px; top: 7px;
+            background: url(./images/sprites.png);
+            background-position: -62px;
+            text-indent: -99999px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="toggle">
+    <div id="main_header">
+        <a href="#" class="left">Main</a>
+        <h1>Moblie</h1>
+        <label for="toggle" class="right" onclick="">toggle</label>
+    </div>
+    
+    <div id="">
+        <ul>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+            <li>버튼</li>
+        </ul>
+    </div>
+   
+    <div id="main_nav">
+        <div id="nav_top" class="nav-tab">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div id="nav_bottom" class="nav-tab">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main_content"></div>
+</body>
+</html>

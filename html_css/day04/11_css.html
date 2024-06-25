@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{margin-top: 20px;margin-bottom: 20px;}
+
+        /* font-size */
+        .font-size-10{font-size: 10px;}
+        .font-size-12{font-size: 12px;}
+        .font-size-16{font-size: 16px;}
+        .font-size-22{font-size: 22px;}
+        .font-size-30{font-size: 30px;}
+        .font-size-40{font-size: 40px;}
+        .font-size-56{font-size: 56px;}
+
+        #wrap{font-size: 20px;list-style: none;}
+        #wrap .font-size-24px{font-size: 24px;}
+        #wrap .font-size-1em{font-size: 1em;}
+        #wrap .font-size-14px{font-size: 14px;}
+        #wrap .font-size-12em{font-size: 1.2em;}
+        #wrap .font-size-14em{font-size: 1.4em;}
+        #wrap .font-size-120per{font-size: 120%;}
+
+        html{font-size: 30px;}
+        .wrap{font-size: 18px;list-style: none;}
+        .wrap .font-size-px16{font-size: 16px;}
+        .wrap .font-size-vw1{font-size: 1vw;}
+        .wrap .font-size-vw15{font-size: 1.5vw;}
+        .wrap .font-size-vw25{font-size: 2.5vw;}
+
+        /* color */
+        .bg-img{
+            padding: 30px;
+            background: url(../src/img/html5.jpg);
+        }
+        .bg-img p{
+            padding: 30px;
+            font-size: 60px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- font-size px-->
+    <div>
+        <p class="font-size-10">10px</p>
+        <p class="font-size-12">12px</p>
+        <p class="font-size-16">16px</p>
+        <p class="font-size-22">22px</p>
+        <p class="font-size-30">30px</p>
+        <p class="font-size-40">40px</p>
+        <p class="font-size-56">56px</p>
+    </div>
+
+    <!-- em , rem , % -->
+    <div>
+        <h3>
+            <mark>font-size : em , % 단위 부모 영역 상대 크기 설정</mark>
+        </h3>
+        <ul id="wrap">
+            <li class="font-size-24px">font-size의 값을 24px로 지정</li>
+            <li class="font-size-1em">font-size의 값을 1em로 지정</li>
+            <li class="font-size-14px">font-size의 값을 14px로 지정</li>
+            <li class="font-size-12em">font-size의 값을 1.2em로 지정</li>
+            <li class="font-size-14em">font-size의 값을 1.4em로 지정</li>
+            <li class="font-size-24px">font-size의 값을 24px로 지정</li>
+            <li class="font-size-120per">font-size의 값을 120%로 지정</li>
+        </ul>
+    </div>
+
+    <!-- font-size vw -->
+    <div>
+        <h3>
+            <mark>font-size : vw Viewport 너비(창너비)의 상대 크기 설정</mark>
+        </h3>
+        <ul class="wrap">
+            <li class="font-size-px16">16px font-size 크기 설정</li>
+            <li class="font-size-vw1">1vw font-size</li>
+            <li class="font-size-vw15">1.5vw font-size</li>
+            <li class="font-size-vw25">2.5vw font-size</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>RGBA(255,255,255,1)의 알파값 이용 배경 투명 색상 설정하기</h3>
+        <div class="bg-img">
+            <p><strong>투명 배경색상 지정하기</strong></p>
+        </div>
+    </div>
+
+</body>
+</html>

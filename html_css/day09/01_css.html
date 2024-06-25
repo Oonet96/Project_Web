@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root 
+        {
+            --top-global-header : 100px; /* CSS 변수로 높이 설정 */
+            --top-global-footer : 200px;
+        }
+
+        *{margin: 0; padding: 0;}
+        body{font-family: sans-serif;}
+        .wrap{width: 100vw; height: 100vh;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+    </style>
+    <!-- Header -->
+    <style>
+        .main-header-container{
+            height: 60px; line-height: 60px;
+            background: #ccc;
+            color: #fff;
+        }
+        .main-header-container .title-txt-container{
+            margin-left: 10px;
+        }
+    </style>
+
+    <!--Top Navi -->
+    <style>
+        .main-gnb-top-container{min-width: 800px; overflow: hidden; background:#32394A; color: #fff;}
+        .navi-btn-left-container , .navi-btn-right-container{ text-align: center; overflow : hidden;}
+        .navi-btn-left-container{float: left;} .navi-btn-right-container{float: right;}
+        .main-gnb-top-container li{float: left; padding: 10px 20px; border-left: 1px solid #242A37; border-right: 1px solid #5F6673;}
+    </style>
+
+    <!-- Main -->
+     <style>
+        .main-content-container{
+            height: calc(100vh - var(--top-global-header)); 
+            background: violet;
+        }
+
+        .lnb-side-left-container{
+            width: 200px; height: 100%;
+            background: purple;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="main-header-container">
+            <div class="title-txt-container">
+                <h1>Fluid</h1>
+            </div>
+        </div>
+        <div class="main-gnb-top-container">
+            <div class="navi-btn-left-container">
+                <ul>
+                    <li>btn-left</li>
+                    <li>btn-left</li>
+                    <li>btn-left</li>
+                    <li>btn-left</li>
+                    <li>btn-left</li>
+                    <li>btn-left</li>
+                </ul>
+            </div>
+            <div class="navi-btn-right-container">
+                <ul>
+                    <li>btn-right</li>
+                    <li>btn-right</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content-container">
+
+            <div class="lnb-side-left-container">
+
+                <div class="lnb-top-container">
+                    <ul>
+                        <li>button</li>
+                        <li>button</li>
+                        <li>button</li>
+                        <li>button</li>
+                        <li>button</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="content-right-container">
+
+            </div>
+
+        </div>
+
+        <div class="main-footer-container">
+
+        </div>
+    </div>
+</body>
+</html>

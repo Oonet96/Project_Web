@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{width: 100vw; height: 100vh;}
+        ul{list-style: none;}
+    </style>
+
+    <!-- header -->
+     <style>
+        #main_header_container{
+            background: #515151;
+            height: 40px;
+        }
+        .header-title-container{
+            width: 40px; height: 40px;
+            margin: 0 auto;
+            background: url(Images/title.png);
+        }
+     </style>
+
+     <!-- content -->
+      <style>
+        #main_content_container{
+            width: 1070px; height: calc(100vh-240px);
+            margin: 0 auto;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        #main_content_container .content-left-container{
+            width: 770px;
+            float: left;
+        }
+        #main_content_container .content-right-container{
+            width: 297px;
+            padding: 20px;
+            box-sizing: border-box;
+            float: right;
+        }
+
+        .content-left-container .content-left-title-container{
+            height: 100px;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+       
+
+        .content-right-container .content-top-spacer{
+            height: 100px;
+        }
+
+        .content-right-container .content-top-list-container .content-right-container .content-bottom-list-container{
+            height: calc((100%-100px)/2);
+        }
+
+        .content-right-container .list-title{
+            text-decoration-line: underline;
+        }
+        
+        .content-right-container ul{
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .content-right-container ul li{
+           overflow: hidden;
+           padding: 10px;
+        }
+
+        .content-right-container ul li img ,.content-right-container ul li p{
+           overflow: hidden;
+           float: left;
+        }
+
+        .content-right-container ul li p{
+            width: 140px;
+            text-overflow: ellipsis;
+            
+        }
+      </style>
+
+      <!-- footer -->
+       <style>
+        
+        #main_footer_container{height: 200px;}
+
+
+       </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="main_header_container">
+            <div class="header-title-container"></div>
+        </div>
+        <div id="main_content_container">
+            
+            <div class="content-left-container">
+                <div class="content-left-title-container">
+                    <h3>Contact Us</h3>
+                    <address style="font-size: 12px;">주소 : 경기도00시00동000-00번지 000</address>
+                </div>
+                <div class="content-map-container">
+                    <img src="http://placehold.it/770x670" alt="">
+                </div>
+            </div>
+            
+            <div class="content-right-container">
+                <div class="content-top-spacer"></div>
+                <div class="content-top-list-container">
+                    <h4 class="list-title">특별함</h4>
+                    <ul>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>00산자락에 위치한 쳔년고찰 00시</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>펜션앞 00산 정상에는 이루ㅡㄹ</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>펜션아파트 울창목서리 수박도분자기</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-bottom-list-container">
+                    <h4 class="list-title">인근여행지</h4>
+                    <ul>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>ㅅk계절밥상편안해</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>ㅓ팬션카페테리아에서</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/70x50" alt="">
+                            <p>텃밭앗직접 기른 싱싱한 채소 몇</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="main_footer_container">
+            <div class="footer-left-container">
+                aaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+            <div class="footer-middle-container">
+                aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+            <div class="footer-right-container">
+                bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_tag 표</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        thead {
+            background-color: #F2F2F2;
+        }
+    </style>
+</head>
+<body>
+    <!-- 교재 방법
+    <table border='1'>
+        <thead>
+            <tr>
+                <th>학생</th>
+                <th scope="col">국어</th>
+                <th scope="col">영어</th>
+                <th scope="col">수학</th>
+            </tr> -->
+    <h2>Table 기본 예제</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>학생</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>철수</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>영희</td>
+                <td>90</td>
+                <td>80</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>민수</td>
+                <td>80</td>
+                <td>90</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<br>
+<hr style="height: 50px; background-color: black;">
+<br>
+
+<body>
+    <!-- colspan, rowspan   -->
+    <!-- body 안에서는 따로따로 속성이 따로 따로 적용이 됩니다~ -->
+    <h2>colspan, rowspan 예제</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>학생</th>
+                <th colspan="2">국어 & 영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>철수</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td rowspan="2">영희 & 민수</td>
+                <td rowspan="2" colspan="2">90</td>
+
+                <td>100</td>
+            </tr>
+        
+            <tr>
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<br>
+<hr>
+<br>
+
+<body>
+    <!-- 실습예제 -->
+    <h2>colspan, rowspan 실습 예제</h2>
+    <table>
+        <tr>
+            <td rowspan="4">공급자</td>
+            <td colspan="2">상호</td>
+            <td colspan="3">연세 IT</td>
+        </tr>
+        <tr>
+            <td>사업자</td>
+            <td colspan="4">123-45-678</td>
+        </tr>
+        <tr>
+            <td>주소</td>
+            <td colspan="4">수원시 장안구</td>
+        </tr>
+        <tr>
+            <td>업종</td>
+            <td colspan="2">교육</td>
+            <td>ㅇㅇ</td>
+            <td>학원</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2>colspan rowspan 실습 예제2</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2" rowspan="2">반/학생</td>
+                <td colspan="3">중간고사</td>
+                <td colspan="3">기말고사</td>
+            </tr>
+            <tr>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+            </tr>
+        </thead>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>철수</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>영희</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td>만두</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>만지</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+    </table>
+</body>
+
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{margin: 0; padding: 0;}
+    li{list-style: none;}
+
+    body>div{
+        width: 960px;
+        margin: 0 auto;
+    }
+    
+    /* Header */
+    body>div:nth-child(1){
+        height: 160px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    body>div:nth-child(1) h1 , body>div:nth-child(1) h2 , body>div:nth-child(1) ul{
+        position: absolute;
+    }
+
+    body>div:nth-child(1) h1{
+        left: 25px;
+        top: 30px;
+    }
+
+    body>div:nth-child(1) h2{
+        left: 25px;
+        top: 70px;
+    }
+
+    body>div:nth-child(1)>ul:nth-of-type(1){
+        right: 0;
+        top: 0;
+    }
+
+    body>div:nth-child(1)>ul:nth-of-type(2){
+        right: 0;
+        bottom: 0;
+    }
+
+    body>div:nth-child(1)>ul:nth-of-type(1) li , body>div:nth-child(1)>ul:nth-of-type(2) li{
+        border: 1px solid black;
+        padding: 5px;
+        float: left;
+    }
+
+    body>div:nth-child(1) li:hover{
+        background: black;
+        color: #fff;
+    }
+    /* Header */
+
+    /* Content */
+    body>div:nth-child(2){
+        overflow:hidden;
+    }
+    body>div:nth-child(2)>div:nth-child(1){
+        width: 750px;
+        float: left;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2){
+        width: 200px;
+        float: right;
+    }
+    
+    body>div:nth-child(2)>div:nth-child(1)>div{
+        border: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input{
+        display:none;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>div:nth-child(3){
+        overflow: hidden;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>div:nth-child(3) label{
+        display: block;
+        float: left;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        background: black;
+        color: #fff;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(1):checked ~ div:nth-child(3)>label:nth-child(1){
+        background: #fff;
+        color: black;
+    }
+    
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(2):checked ~ div:nth-child(3)>label:nth-child(2){
+        background: #fff;
+        color: black;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(1):checked ~ div:nth-child(4){
+        display: block;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(2):checked ~ div:nth-child(5){
+        display: block;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(1) ~ div:nth-child(4){
+        display: none;
+    }
+
+    body>div:nth-child(2)>div:nth-child(2)>input:nth-child(2) ~ div:nth-child(5){
+        display: none;
+    }
+    /* Content */
+</style>
+</head>
+<body>
+    <div>
+        <h1>Rint Development</h1>
+        <h2>HTML5 + CSS3 Basic</h2>
+        <ul>
+            <li>Web</li>
+            <li>Mobile</li>
+            <li>Game</li>
+            <li>Simulation</li>
+            <li>Data</li>
+        </ul>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Jquery</li>
+            <li>Node.js</li>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <div>
+                <h1>제목1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus eligendi repellendus recusandae consequatur omnis quibusdam labore, cumque fugiat quaerat quidem, corporis iusto praesentium enim sequi laboriosam deleniti repellat maiores.</p>
+            </div>
+            <div>
+                <h1>제목2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus eligendi repellendus recusandae consequatur omnis quibusdam labore, cumque fugiat quaerat quidem, corporis iusto praesentium enim sequi laboriosam deleniti repellat maiores.</p>
+            </div>
+            <div>
+                <h1>제목3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae accusamus eligendi repellendus recusandae consequatur omnis quibusdam labore, cumque fugiat quaerat quidem, corporis iusto praesentium enim sequi laboriosam deleniti repellat maiores.</p>
+            </div>
+        </div>
+        <div>
+            <input type="radio" id="html" name="tab" checked="checked">
+            <input type="radio" id="css" name="tab" >
+            <div class="buttons">
+                <label for="html">HTML</label>
+                <label for="css">CSS</label>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li>HTML input</li>
+                    <li>HTML form</li>
+                    <li>HTML method</li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li>CSS 선택자</li>
+                    <li>CSS transform</li>
+                    <li>CSS animation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>연세IT미래교육원</h3>
+        <address>수원시 장안구 영화동</address>
+    </div>
+</body>
+</html>
