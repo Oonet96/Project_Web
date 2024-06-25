@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts) {
+        const logDiv = document.getElementById("log");
+        const newLogEntry = document.createElement("div");
+        // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+        newLogEntry.textContent = texts.join(" ");
+        logDiv.appendChild(newLogEntry);
+      }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // 구구단 2단부터 9단까지 for문 하나로 작업하기
+        
+        // 하나씩 다 만들기
+        // for(let i=2; i<=9; i++){
+        //     log(`${i} x 1 = ${i*1}`);
+        //     log(`${i} x 2 = ${i*2}`);
+        //     log(`${i} x 3 = ${i*3}`);
+        //     log(`${i} x 4 = ${i*4}`);
+        //     log(`${i} x 5 = ${i*5}`);
+        //     log(`${i} x 6 = ${i*6}`);
+        //     log(`${i} x 7 = ${i*7}`);
+        //     log(`${i} x 8 = ${i*8}`);
+        //     log(`${i} x 9 = ${i*9}`);
+        // }
+        
+        // for문 2개 사용
+        // for(let i = 2; i<=9; i++){
+            
+        //     for(let j = 1; j<=9; j++){
+        //         log(`${i} x ${j} = ${i * j}`);
+        //     }
+
+        // }
+
+        // for문 1개 사용 초기식 2개 사용 if 2개 사용
+        // for (let i = 2, j = 1; i <= 9; j++) {
+        //     if (j > 9) {
+        //         i++;
+        //         j = 1;
+        //         if (i > 9) break;
+        //     }
+        
+        //     log(`${i} x ${j} = ${i * j}`);
+        
+        // }
+        
+        // for문 1개 사용 초기식 2개 사용 if 1개 사용
+        // for (let i = 2, j = 1; (i < 9 || j <= 9); j++) {
+        //     if (j > 9) {
+        //         i++;
+        //         j = 1;
+        //     }
+            
+        //     log(`${i} x ${j} = ${i * j}`);
+        // }
+
+        // 재귀 함수 사용
+        // function gugudan(dan, num) {
+        //     if (dan > 9) return;
+        //     if (num > 9) {
+        //         gugudan(dan + 1, 1);
+        //         return;
+        //     }
+        //     log(`${dan} x ${num} = ${dan * num}`);
+        //     gugudan(dan, num + 1);
+        // }
+
+        // for (let i = 2; i <= 2; i++) {
+        //     gugudan(i, 1);
+        // }
+
+    </script>
+</body>
+</html>
