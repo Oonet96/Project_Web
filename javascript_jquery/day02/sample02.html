@@ -50,11 +50,11 @@
 
         for(i = 0; i < 1234;){
            
+            person = member[iNumber%4];
+            
             iNumber++;
             
             i = calc369(iNumber,i);
-            
-            person = member[iNumber%4];
             
             log("숫자: "+iNumber+" 박수: "+i+" 사람: "+person);
         }
