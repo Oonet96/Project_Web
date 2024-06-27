@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        // function all(a,b){
+        //     let result = 0;
+        //     result = a>b ? console.log('a>b') : console.log('a<b');
+        //     return result;
+        // }
+
+        let first = 13;
+        let last = 7;
+
+        // let all = function(a,b){
+        //     let result;
+        //     result = a>b ? 'a>b' : 'a<b';
+        //     return result;
+        // }(first,last);
+
+        function abFunc(a,b){
+            let result = a>b ? a : b;
+            return result;
+        }
+
+        function abFunc2(a,b){
+            return a>b ? a : b;
+        }
+
+        const ab = (a,b)=>{
+            return a>b ? a : b;
+        };
+
+        const ab2 = (a,b)=> a>b ? a : b;
+          
+        console.log(abFunc(first,last));
+        console.log(abFunc2(first,last));
+        console.log(ab(first,last));
+        console.log(ab2(first,last));
+        
+        // all(first,last);
+        // all(23,45);
+        // all(1/2,3/4);
+    </script>
+</body>
+</html>

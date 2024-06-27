@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+        function log(...texts) {
+        const logDiv = document.getElementById("log");
+        const newLogEntry = document.createElement("div");
+        // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+        newLogEntry.textContent = texts.join(" ");
+        logDiv.appendChild(newLogEntry);
+      }
+      function writeln(text){
+        document.write(text,'<br>');
+      }
+    </script>
+</head>
+<body>
+
+    <div id="log"></div>
+    <script>
+        // let today= new Date();
+        // document.writeln(today,'<br>');
+        // document.writeln(today.getDay());
+    
+        // let sec = parseInt(today.getTime()/1000);
+
+        // document.writeln('<br>',sec);
+        // document.writeln('<br>',today.getTime());
+
+        // let day1= new Date('2024,6,27 14:00:00');
+        // let day2= new Date('2024,6,27 15:02:03');
+
+        // let dif =day2-day1;
+        // let getSec = (milSec)=>{return parseInt((milSec/1000)%60);};
+        // let getMin = (milSec)=>{return parseInt((milSec/1000/60)%60)};
+        // let getHour = (milSec)=>{return parseInt((milSec/1000/60/60)%24)};
+
+        // document.write(day1.getTime(),'<br>');
+        // document.write(day2.getTime(),'<br>');
+        // document.write(dif,'<br>');
+        // document.write(getHour(dif),'시 ',getMin(dif),'분 ',getSec(dif),'초');
+
+        //숫자객체
+        // writeln(Math.abs(-23));     //절대값
+        // writeln(Math.pow(2,3));     //지수, 승수
+        // writeln(Math.sqrt(2));      //제곱근
+        // writeln(Math.ceil(2.3));    //올림
+        // writeln(Math.round(2.3));   //반올림
+        // writeln(Math.floor(2.3));   //내림
+        // writeln(Math.trunc(2.3));   //버림
+        // writeln(Math.max(2,3));     //큰값
+        // writeln(Math.min(2,3));     //작은값
+        // writeln(Math.random());     //랜덤 1~0
+        
+        
+        // // Math.floor(Math.random()*범위(최대값)%10)+범위(최소값)
+        // writeln(Math.floor(Math.random()*6%10)+1);     //랜덤 1~6까지 
+
+        // 배열
+        let pen = new Array("red","green","blue","orange");
+        let penColor = pen.slice(3,4);
+
+        // for(let i = 0; i < pen.length; i++){
+        //     writeln(pen[i]);
+        // }
+
+        for (let i = 0; i < penColor.length; i++){
+            writeln(penColor[i]);
+        }
+    </script>
+</body>
+</html>
