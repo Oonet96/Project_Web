@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+    <!-- <dl>
+        <dt>에펠탑의 신랑신부</dt>
+        <dd><img src="./images/pic01.jpg" alt=""></dd>
+    </dl> -->
+    <script>
+
+        // let title = '에펠탑의 신랑신부';
+        // let imgAddr = './images/pic01.jpg';
+        // document.write('<dl><dt>',title,'</dt><dd><img src="',imgAddr,'" alt=""></dd></dl>');
+
+
+        const IMG_COUNT = 4
+        let imgAddrs = new Array(IMG_COUNT);
+        let titles = new Array(IMG_COUNT);
+        titles[0]='에펠탑의 신랑신부';
+        titles[1]='꿈';
+        titles[2]='무용실';
+        titles[3]='피아노치는 소녀들';
+
+        for(let i = 0; i<IMG_COUNT; i++){
+            imgAddrs[i]='./images/pic0'+(i+1)+'.jpg'
+        }
+
+        // for(let i = 0; i<IMG_COUNT;i++){
+        //     document.write('<dl><dt>',titles[i],'</dt><dd><img src="',imgAddrs[i],'" alt=""></dd></dl>');
+        // }
+      
+        
+        let Pictures = new Array(IMG_COUNT);
+
+        for(let i = 0; i<IMG_COUNT;i++){
+            let Picture = new Object();
+            Picture.title = titles[i];
+            Picture.imgAddr = imgAddrs[i];
+            Pictures[i]=Picture;
+        }
+
+        for(let i = 0; i<IMG_COUNT;i++){
+            Pictures[i].show = function(){document.write('<dl><dt>',Pictures[i].title,'</dt><dd><img src="',Pictures[i].imgAddr,'" alt=""></dd></dl>');}
+        }
+        
+        for(let i = 0; i<IMG_COUNT;i++){
+            Pictures[i].show();
+        }
+
+        function Picture(aTitle, aImgAddr){
+            this.title = aTitle;
+            this.imgAddr = aImgAddr;
+            this.show = function(){
+                function getTitle(){ return this.title;}
+                document.write('<dl><dt>',getTitle(),'</dt><dd><img src="',
+                    this.imgAddr,'"></dd></dl>');
+            };
+
+        }
+
+        let pic = new Picture('에펠탑의 신랑신부','./images/pic01.jpg');
+        pic.show(); // this = window;
+
+       
+    </script>
+</body>
+</html>
