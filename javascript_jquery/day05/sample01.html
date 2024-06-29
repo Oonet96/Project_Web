@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-
+        
         // 트럼프 카드 한벌 만들기
         // 스페이드 클로버 다이아 하트(♠, ♣, ◇, ♡)(ㅁ->한자) : 4가지 문양
         // A,2~10,J,Q,K : 13가지 숫자
@@ -19,7 +19,64 @@
         // 6. 5번에서 만든 것으로 3번 작업
         // 7. 버튼 이벤트 구현 (카드 셔플 , 카드 게임 시작, 다시시작)
 
+        let cardDeck = new Array();
+        let arrCardShape = new Array('♠', '♣', '◇', '♡');
+        let cardNum = 13;
 
+        // 1 start
+        for (let i = 0; i < arrCardShape.length; i++) {
+
+            for (let j = 0; j < cardNum; j++) {
+                if (j == 0) {
+                    cardDeck.push(`${arrCardShape[i]} Ace`);
+                } else if (j > 9) {
+                    switch (j) {
+                        case 10:
+                            cardDeck.push(`${arrCardShape[i]} Jack`);
+                            break;
+                        case 11:
+                            cardDeck.push(`${arrCardShape[i]} Queen`);
+                            break;
+                        case 12:
+                            cardDeck.push(`${arrCardShape[i]} King`);
+                            break;
+                    }
+                } else {
+                    cardDeck.push(`${arrCardShape[i]}${j+1}`);
+                }
+            }
+        }
+
+        // document.write("카드 더미 수 : ", cardDeck.length, "<br>");
+
+        // for (let i = 0; i < cardDeck.length; i++) {
+        //     document.write(cardDeck[i], "<br>");
+        // }
+        // 1 end
+
+        // 2 start
+        // 랜덤으로 숫자 뽑기 Math.floor(Math.random()*범위(최대값)%10)+범위(최소값)
+        let arrNum = new Array();
+        for (let i = 0; i < cardDeck.length; ) {
+            let temp = Math.floor(Math.random() * cardDeck.length % 100); //0~51
+
+
+            for (let j = 0; j < arrNum.length; j++) {
+                let temp2 = 0;
+                arrNum[j] == temp ? temp = null : temp2 = temp;
+
+                if(temp == null) break;
+            }
+
+            if (arrNum.length == 0 || temp != null) {
+                arrNum.push(temp);
+                document.write(arrNum[i], "<br>");
+                i++;
+            }
+        }
+        
+
+        // 2 end
     </script>
 </body>
 </html>
