@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container {
+            padding: 1em;
+            background: #F0F0F0;
+            margin-top: 1em;
+            border: 1px solid #ccc;
+        }
+        .container p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .container a {
+            display: block;
+            margin-top: 0.5em;
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="content">
+
+    </div>
+
+    <script>
+        const DIV_CONTENT = document.getElementById("content");
+        const DIV_CONTAINER = document.createElement("div");
+        let p = document.createElement("p");
+        let a = document.createElement("a");
+        DIV_CONTAINER.classList.add("container");
+        p.textContent = "이것은 새로 생성된 문단입니다.";
+        a.setAttribute("href","http://www.naver.com");
+        a.textContent = "네이버로 이동";
+
+
+        DIV_CONTAINER.appendChild(p);
+
+        DIV_CONTAINER.appendChild(a);
+        
+        DIV_CONTENT.appendChild(DIV_CONTAINER);
+
+    </script>
+</body>
+</html>

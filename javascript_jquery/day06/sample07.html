@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{font: 12px "나눔고딕"; }
+        #wrap{ position: relative; width: 700px; height: 500px; background: #0CF;}
+        #box{position: absolute; left: 0px; top: 0px; width: 50px; height: 50px; background: #ff6;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box"></div>
+    </div>
+    <script>
+        const WRAP = document.querySelector("#wrap");
+        const BOX = document.querySelector("#box");
+
+
+        BOX.addEventListener('click',()=>{
+            BOX.style.left = Math.floor(Math.random()*WRAP.clientWidth%1000)+"px";
+            BOX.style.top = Math.floor(Math.random()*WRAP.clientHeight%1000)+"px";
+        })
+        
+    </script>
+</body>
+</html>

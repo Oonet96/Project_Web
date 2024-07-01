@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+    <script>
+        const WRAP = document.getElementById("wrap");
+        const IMG_COUNT = 6;
+        for(let i =0, imgEle; i<IMG_COUNT; i++){
+            imgEle = document.createElement("img");
+            imgEle.setAttribute("src",`./images/color_${i+1}.png`);
+            imgEle.setAttribute("style",`width:${parseInt(100/IMG_COUNT)}%`)
+            WRAP.appendChild(imgEle);
+        }
+    </script>
+</body>
+</html>

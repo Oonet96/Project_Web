@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = ()=>{
+            const aEle = document.querySelector(".cta>#reservation1");
+            aEle.textContent = "뚱인데요";
+        }
+    </script>
+</head>
+<body>
+    <div class="cta">
+        <p id = "reservation1" onclick="javascript:doClick1()">예약1 합니다.</p>
+        <p id = "reservation2" href="#">예약2 합니다.</p>
+        <p id = "reservation3" href="#">예약3 합니다.</p>
+        <section id="no" class="hide">
+          <h3 class="title">Sorry about that!</h3>
+          <p>By some weird coincidence, all the rooms at Moonwalk Manor are booked out for the date you planned to take your trip. Unfortunately we are unable to provide you with sufficient lodging for your party at this time. Moonwalk Manor is very busy and your satisfaction is our top priority. When you take your first steps in the moon dust, your life will change. We are always at your service. Your satisfaction matters to us.</p>
+        </section>
+    </div>
+    <script>
+        function doClick1(){
+            alert('예약1');
+        }
+
+        // += 불가능 , 연산자 오버로딩도 없어서 구현도 불가능
+        const btn2 = document.getElementById("reservation2");
+        btn2.onclick = ()=>{
+            alert("예약2");
+        }
+
+        const btn3 = document.getElementById("reservation3");
+        btn3.addEventListener('click',()=>{alert("예약3")});
+        btn3.removeEventListener('click');
+
+    </script>
+   
+</body>
+</html>

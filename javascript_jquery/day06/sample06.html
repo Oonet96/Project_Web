@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title1">제목1</h2>
+    <ul id="list1">
+        <li>리스트1-1</li>
+        <li>리스트1-2</li>
+        <li>리스트1-3</li>
+        <li>리스트1-4</li>
+    </ul>
+    <h2 id="title2">제목2</h2>
+    <ul id="list2">
+        <li>리스트2-1</li>
+        <li>리스트2-2</li>
+        <li>리스트2-3</li>
+        <li>리스트2-4</li>
+    </ul>
+    <script>
+        const title1 =document.getElementById("title1");
+        const title2 =document.getElementById("title2");
+        const list1 = document.getElementById("list1");
+        const list2 = document.getElementById("list2");
+
+        // function setDisplayBlock(list){
+        //     list.style.display = "block"
+        // }
+        // function setDisplayNone(list){
+        //     list.style.display = "none"
+        // }
+
+        // function setDisplay(list,isBlock = false){
+        //     isBlock ? list.style.display ="block" : list.style.display ="none";
+        // }
+
+        // 매개변수가 있는 함수를 사용할때는 익명함수 안에 넣을 것!
+        // ()=>{} == function(){}
+        // 1
+        // title1.addEventListener('mouseover',()=>{list1.style.display="block"});
+        // title1.addEventListener('mouseout',()=>{list1.style.display="none"});
+        // title2.addEventListener('mouseover',()=>{list2.style.display="block"});
+        // title2.addEventListener('mouseout',()=>{list2.style.display="none"});
+
+        // 2
+        // title1.addEventListener('mouseover',()=>{setDisplayBlock(list1)});
+        // title1.addEventListener('mouseout',()=>{setDisplayNone(list1)});
+        // title2.addEventListener('mouseover',()=>{setDisplayBlock(list2)});
+        // title2.addEventListener('mouseout',()=>{setDisplayNone(list2)});
+
+        // 3
+        // title1.addEventListener('mouseover',()=>{setDisplay(list1,true)});
+        // title1.addEventListener('mouseout',()=>{setDisplay(list1)});
+        // title2.addEventListener('mouseover',()=>{setDisplay(list2,true)});
+        // title2.addEventListener('mouseout',()=>{setDisplay(list2)});
+    </script>
+</body>
+</html>

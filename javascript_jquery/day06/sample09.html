@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 150px;
+            margin:0px 15px;
+            font: bold 25px/50px Arial;
+            background-color: red;
+            color: white;
+            text-align: center;
+            border: none;
+        }
+
+        #box{
+            position: absolute;
+            left: 0px;
+            top: 200px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="playLeft">Play→</button>
+    <button type="button" id="playRight">Play←</button>
+    <button type="button" id="playUp">Play↑</button>
+    <button type="button" id="playDown">Play↓</button>
+    <button type="button" id="stop">Stop</button>
+    <div id="box"></div>
+
+    <script>
+        const btnPlay1 = document.querySelector("#playLeft");
+        const btnPlay2 = document.querySelector("#playRight");
+        const btnPlay3 = document.querySelector("#playUp");
+        const btnPlay4 = document.querySelector("#playDown");
+        const btnStop = document.querySelector("#stop");
+        let boxEle = document.querySelector("#box");
+
+        let boxLeft = 0;
+        let boxTop = 200;
+        let mvTimer;
+
+        function moveBox(isLeft,isTop,isMoveToWid = true){
+            isMoveToWid ? isLeft ? boxLeft++ : boxLeft-- 
+            : isTop ? boxTop-- : boxTop++
+            boxEle.style.left =boxLeft+"px";
+            boxEle.style.top = boxTop+"px";
+        }
+
+        function play(isLeft,isTop,isMoveToWid = true){
+            if(mvTimer == null)
+                mvTimer = setInterval(()=>{moveBox(isLeft,isTop,isMoveToWid)},1);
+            else{
+                stop();
+                play(isLeft,isTop,isMoveToWid);
+            }
+        }
+
+        function stop(){
+            if(mvTimer != null){
+                clearInterval(mvTimer);
+                mvTimer = null;
+            }
+        }
+
+        btnPlay1.addEventListener("click",()=>{play(true,false)});
+        btnPlay2.addEventListener("click",()=>{play(false,false)});
+        btnPlay3.addEventListener("click",()=>{play(true,true,false)});
+        btnPlay4.addEventListener("click",()=>{play(true,false,false)});
+        btnStop.addEventListener("click",stop);
+    </script>
+</body>
+</html>

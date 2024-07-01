@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <style media="screen">
+      .cta {
+          padding: 3em;
+          background: #D2D434;
+          text-align: center;
+      }
+      .cta a {
+          padding: 0 .5em;
+          font-size: 2em;
+          font-weight: 900;
+          color: #615206;
+          text-decoration: none;
+          border: 5px solid #837325;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="cta">
+    <a href="#">DOM TEST</a>
+  </div>
+  
+  <script>
+    // 05. DOM 속성 변경하기
+    const CTA = document.querySelector(".cta>a");
+
+    CTA.hasAttribute("target") ? alert(CTA.getAttribute("target")) : CTA.setAttribute("target","_blank");
+
+    // if(CTA.hasAttribute("href")){
+    //     let strTemp = CTA.getAttribute("href");
+    //     alert(strTemp);
+    //     CTA.setAttribute("href","http://www.naver.com");
+    // }else{
+    //     alert("이동할 페이지가 없습니다.")
+    //     CTA.setAttribute("href","http://www.daum.net");
+    // }
+    // function hasAttrAlert(cssClass , attr = null){
+    //     attr != null ? alert(cssClass.getAttribute("href")) : alert("이동할 페이지가 없습니다.");
+    // }
+    // CTA.hasAttribute("href") ? hasAttrAlert(CTA, "href") : hasAttrAlert(CTA);
+
+    // alert(CTA.hasAttribute("href"));
+
+  </script>
+  </body>
+</html>
