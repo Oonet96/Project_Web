@@ -45,6 +45,27 @@
     </style>
   </head>
   <body>
+    <!-- 레이아웃이 의도치 안게 조정되는 이유 -ChatGPT -->
+    <!-- 레이아웃이 의도치 않게 조정되는 이유는 여러 가지가 있을 수 있습니다. prependTo와 appendTo를 사용하여 요소를 추가할 때, 
+        요소의 배치 및 스타일이 변경되면서 레이아웃이 깨질 수 있습니다. 특히 CSS float 속성을 사용하지 않는 경우, 
+        다음과 같은 이유로 레이아웃이 의도치 않게 변경될 수 있습니다:
+
+        블록 레벨 요소의 기본 배치: 대부분의 HTML 요소는 기본적으로 블록 레벨 요소입니다. 
+        블록 레벨 요소는 자동으로 새로운 줄에 배치되므로, 새로운 요소가 추가될 때마다 기존 레이아웃이 깨질 수 있습니다.
+
+        정렬 문제: CSS float를 사용하지 않으면, 요소들이 기본적인 문서 흐름에 따라 배치됩니다. 
+        이는 요소들이 상자 모델(Box Model)에 따라 쌓이게 되어, 새로운 요소가 추가될 때마다 다른 요소들이 밀려날 수 있습니다.
+
+        부모 요소의 크기 변화: 새로운 요소를 추가하면 부모 요소의 크기가 변경될 수 있습니다. 
+        이는 다른 자식 요소들의 위치를 변경시켜 레이아웃이 깨지게 만들 수 있습니다.
+
+        CSS 스타일의 상속 및 우선순위 문제: 새로운 요소가 추가될 때, CSS 스타일의 상속 및 우선순위에 따라 의도치 않은 스타일이 적용될 수 있습니다.
+
+        이 문제를 해결하기 위해 Flexbox 또는 Grid 레이아웃을 사용할 수 있습니다. 
+        이러한 레이아웃 시스템은 요소들의 정렬과 배치를 더 유연하고 직관적으로 관리할 수 있게 해줍니다. 위에서 제공한 Flexbox 예제를 사용하면 이러한 문제를 피할 수 있습니다.
+
+        또한, jQuery prependTo와 appendTo 메서드를 사용하여 요소를 추가할 때, 요소들의 스타일이 일관되게 적용되도록 CSS를 잘 정의하는 것이 중요합니다. -->
+
     <div id="box">
       <ul>
         <li><img src="images/pic1.jpg" alt="이미지1" /></li>
@@ -58,17 +79,34 @@
       </p>
     </div>
     <script>
-        let arrImg = new Array();
+        let arrImgEle = new Array();
+        let arrListEle = new Array();
+
       $(function () {
-        arrImg=$("ul img");
+
+        arrListEle = $("ul li");
+
         $("#prev").click(function () {
-        //   $("ul>li:eq(3)").prependTo("ul");
-            $("ul>li:eq(0)>img").attr("src",$("ul>li:eq(3)>img").attr("src"));
+          $("ul>li:eq(3)").prependTo("ul");
+
+          //  정렬 없이 기능 1
+          // arrImgEle = $("ul img");
+          // arrListEle[0].append(arrImgEle[1]);
+          // arrListEle[1].append(arrImgEle[2]);
+          // arrListEle[2].append(arrImgEle[3]);
+          // arrListEle[3].append(arrImgEle[0]);
         });
 
         $("#next").click(function () {
-        //   $("ul>li:eq(0)").appendTo("ul");
-            $("ul>li:eq(3)>img").attr("src",$("ul>li:eq(0)>img").attr("src"));
+          $("ul>li:eq(0)").appendTo("ul");
+
+          //  정렬 없이 기능 1
+          // arrImgEle = $("ul img");
+          // arrListEle[0].append(arrImgEle[3]);
+          // arrListEle[1].append(arrImgEle[0]);
+          // arrListEle[2].append(arrImgEle[1]);
+          // arrListEle[3].append(arrImgEle[2]);
+
         });
       });
     </script>
