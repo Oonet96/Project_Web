@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        window.onload = ()=>{
+            const divEle = document.getElementById("content");
+            const pEle = document.createElement("p");
+            const text = document.createTextNode("안녕하세요");
+            pEle.appendChild(text);
+            divEle.appendChild(pEle);
+        };
+        
+        $("document").ready
+        (
+            ()=>{
+                // let pEle = $("p").text("저리가");
+                // $("#content2").appendChild(pEle);
+                $("#content2").append($("<p>").text("저리가"));
+            }
+        )
+    </script>
+</head>
+<body>
+    <h2>자바스크립트방식</h2>
+    <div id="content"></div>
+    <h2>제이쿼리방식</h2>
+    <div id="content2"></div>
+</body>
+</html>

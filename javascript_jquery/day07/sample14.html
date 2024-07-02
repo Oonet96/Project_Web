@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        section{
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;        
+        }
+        p#first{
+            width: 350px;
+            padding: 20px;
+            border: 3px solid gray;
+            background: yellow;
+        }
+        p.last{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <button id="btn01">추가</button>
+        <p id="first">본문내용1</p>
+    </section>
+
+    <script>
+        let cnt = 0;
+        $(()=>{
+            $("#btn01").click(()=>{
+                // append
+                $("p").append("<i> append b element ",cnt," create </i>");
+                // prepend
+                $("p").prepend("<i> prepend b element ",cnt," create </i>");
+                // before
+                $("p").before("<i> before b element ",cnt," create </i>");
+                // after
+                $("p").after("<i> after b element ",cnt," create </i>");
+
+                cnt+=1;
+            });
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <style>
+      div {
+        width: 1000px;
+        height: 250px;
+        background-color: #222;
+      }
+
+      ul {
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+      }
+
+      ul > li {
+        display: inline-block;
+        padding: 10px 20px 0 20px;
+      }
+
+      ul > li > img {
+        border: 10px solid #888;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      p > button {
+        width: 150px;
+        height: 40px;
+        display: inline-block;
+        margin: 0 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+        background-color: hsl(197, 71%, 35%);
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <ul>
+        <li><img src="images/pic1.jpg" alt="이미지1" /></li>
+        <li><img src="images/pic2.jpg" alt="이미지2" /></li>
+        <li><img src="images/pic3.jpg" alt="이미지3" /></li>
+        <li><img src="images/pic4.jpg" alt="이미지4" /></li>
+      </ul>
+      <p>
+        <button id="prev">앞으로</button>
+        <button id="next">뒤로</button>
+      </p>
+    </div>
+    <script>
+        let arrImg = new Array();
+      $(function () {
+        arrImg=$("ul img");
+        $("#prev").click(function () {
+        //   $("ul>li:eq(3)").prependTo("ul");
+            $("ul>li:eq(0)>img").attr("src",$("ul>li:eq(3)>img").attr("src"));
+        });
+
+        $("#next").click(function () {
+        //   $("ul>li:eq(0)").appendTo("ul");
+            $("ul>li:eq(3)>img").attr("src",$("ul>li:eq(0)>img").attr("src"));
+        });
+      });
+    </script>
+  </body>
+</html>
