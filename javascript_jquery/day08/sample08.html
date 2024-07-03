@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div#wrap {
+            width: 1000px;
+        }
+
+        div#bigImage {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        div#all {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        div#show-view>ul {
+            display: flex;
+            background-color: #444;
+        }
+
+        div#show-view>ul>li>a {
+            display: flex;
+            align-items: center;
+        }
+
+        div#show-view img {
+            width: 120px;
+            padding: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        #prev {
+            position: absolute;
+            top: 30px;
+            left: 65px;
+            cursor: pointer;
+        }
+
+        #next {
+            position: absolute;
+            top: 30px;
+            right: 65px;
+            cursor: pointer;
+            rotate: 180deg;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="bigImage">
+            <img src="./img/flw_01.jpg" alt="room1" width="800px" />
+        </div>
+
+        <div id="all">
+            <p id="prev">
+                <img src="./img/prev.png" alt="" width="23" height="23" />
+            </p>
+
+            <div id="show-view">
+                <ul>
+                    <li>
+                        <a class="smallImage" href="img/flw_01.jpg"><img src="img/flw_01.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="img/flw_02.jpg"><img src="img/flw_02.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="img/flw_03.jpg"><img src="img/flw_03.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="img/flw_04.jpg"><img src="img/flw_04.jpg" alt="" /></a>
+                    </li>
+                    <li>
+                        <a class="smallImage" href="img/flw_05.jpg"><img src="img/flw_05.jpg" alt="" /></a>
+                    </li>
+                </ul>
+            </div>
+            <p id="next">
+                <img src="./img/prev.png" alt="" width="23" height="23" />
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#prev").click(function () {
+                $("ul>li:eq(4)").prependTo("ul");
+            });
+
+            $("#next").click(function () {
+                $("ul>li:eq(0)").appendTo("ul");
+            });
+
+            $("li>a").click(function () {
+                let img = $(this).attr("href");
+                $("#bigImage>img").attr("src", img);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
