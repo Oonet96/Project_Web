@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/javascript_jquery/js/jquery.js"></script>
+    <style>
+        ul{list-style: none;}
+    </style>
+</head>
+<body>
+    <ul id="btn">
+        <li><button addr="img/card/1S.png" id="btn1">얍얍</a></li>
+        <li><button addr="img/card/1C.png" id="btn2">얍</a></li>
+        <li><button addr="img/card/1D.png" id="btn3">얍얍얍</a></li>
+        <li><button addr="img/card/1H.png" id="btn4">야랴랴얍랴얍</a></li>
+    </ul>
+    <p><img src="img/card/2S.png" alt=""></p>
+    <script>
+        $(()=>{
+            $('li>button').click(function(){
+                $('p>img').attr('src',$(this).attr('addr'))
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- s c h d -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/javascript_jquery/js/jquery.js"></script>
+ </head>
+ <body>
+    <section>
+        <p class="btn">
+            <button id="btn01">이미지 가져오기</button>
+        </p>
+        <p class="box01">
+            <img src="/javascript_jquery/day08/img/card/1S.png" alt="">
+        </p>
+    </section>
+    <script>
+        let imgAddrNum = 1;
+        let imgAddrStr = "SCDH"
+        let strAddr = 0;
+        let isRunning = false;
+
+
+        function showNextCard(){
+            if(isRunning){
+                if(imgAddrNum < 10){
+                        imgAddrNum++;
+                }else{
+                    imgAddrNum = 1;
+                    if(strAddr<3)strAddr++;
+                    else strAddr = 0;
+                }
+                $(".box01>img").attr("src",`/javascript_jquery/day08/img/card/${imgAddrNum+imgAddrStr[strAddr]}.png`);
+
+            }
+        }
+
+        setInterval(showNextCard,100);
+
+        $(()=>{
+           
+            // $('#btn01').click(showNextCard());//클릭을 안해도 바로 한번 실행되고 작동 안함
+            // $('#btn01').click(showNextCard); //함수 키워드 집어넣야됨
+            // $('#btn01').click(()=>{showNextCard();});
+
+            $('#btn01').click(()=>{isRunning = !isRunning;});
+
+        });
+    </script>
+ </body>
+ </html>
