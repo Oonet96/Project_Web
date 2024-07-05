@@ -1,0 +1,45 @@
+<<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="../js/jquery.js"></script>
+</head>
+<body>
+<ul>
+    <li><input type="text" value="INPUT 태그"></li>
+    <li><input type="text" value="INPUT 태그" disabled></li>
+    <li><input type="password" value="INPUT 태그, :password" ></li>
+    <li><input type="image" src="img/button.png" ></li>
+    <li><input type="file"></li>
+    <li><input type="checkbox"></li>
+    <li><input type="checkbox" checked></li>
+    <li><input type="radio"></li>
+    <li><input type="radio" checked></li>
+    <li><select>
+        <option>SELECT 태그, 가</option>
+        <option>SELECT 태그, 나</option>
+    </select></li>
+    <li><input type="button" value="INPUT 태그, :button"></li>
+    <li><button type="reset">BUTTON 태그, :reset</button></li>
+    <li><button type="submit">BUTTON 태그, :submit</button></li>
+</ul>
+<script>
+    $(function(){
+        // <button> - input 태그입
+        // $(':input').css('display','none');
+        $(':input').css({background:'red',border:'3px solid blue'});
+        $(':text').css({background:'red',border:'3px solid yellowgreen'});
+        $(':password').css({background:'yellow'})
+        $(':radio').css('accent-color','red');
+        $(":submit").css('border','20px solid pink');
+        $(':enabled').css('width','500px');
+        $(':disabled').css('height','250px');
+        $(':button').on('click',()=>{
+            $(':input').val('안녕하세요');
+        });
+
+    });
+</script>
+</body>
+</html>

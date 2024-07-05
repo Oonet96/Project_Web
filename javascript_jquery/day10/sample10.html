@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../day09/css/reset.css">
+    <style>
+        #content{
+            width: 960px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+        ul{
+            width: 300px;
+            float: left;
+            background: black;
+            padding: 10px;
+        }
+        ul>li{width: 140px; float: left; margin: 5px;}
+        ul>li>a>img{width: 100%; vertical-align: top;}
+        #main{
+            width: 520px;
+            float: right;
+            border: 1px solid black;
+            position: relative;
+        }
+        #main>img{
+            position: absolute;
+            left: 0; right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li><a data="img/img_01.jpg"><img src="img/img_01.jpg" alt=""></a></li>
+            <li><a data="img/img_02.jpg"><img src="img/img_02.jpg" alt=""></a></li>
+            <li><a data="img/img_03.jpg"><img src="img/img_03.jpg" alt=""></a></li>
+            <li><a data="img/img_04.jpg"><img src="img/img_04.jpg" alt=""></a></li>
+            <li><a data="img/img_05.jpg"><img src="img/img_05.jpg" alt=""></a></li>
+            <li><a data="img/img_06.jpg"><img src="img/img_06.jpg" alt=""></a></li>
+        </ul>
+        <div id="main"><img src="img/img_01.jpg" alt=""></div>
+    </div>
+    <script>
+        $(()=>{
+            $('ul>li>a').on('click',function(){
+                $('#main').prepend('<img src="'+$(this).attr('data')+'">');
+                $('#main>img:last').fadeOut(300,function(){
+                    $('#main>img:last').remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

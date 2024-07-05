@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+    <h1>jquery AJAX</h1>
+    <p>
+        <button id="btn01">AJAX</button>
+        <button id="btn02">GET</button>
+        <button id="btn03">POST</button>
+        <button id="btn04">LOAD</button>
+    </p>
+    <p id="main"></p>
+    <script>
+        function func1(data){
+            $('#main').append(data);
+        }
+
+        function func2(xhr, status, strErr){
+            $('#main').append("error=>"+strErr);
+
+        }
+        function func3(xhr, status){
+            $('#main').append("<p>종ㅇ료ㅗㄱ하였습니다.</p>");
+        }
+        function getData(){
+            $.ajax({
+                url:"hello.txt",
+                type:"GET",
+                dataType:"text",
+                success:func1,
+                error:func2,
+                complete:func3
+            })
+        }
+        $('#btn01').on('click',()=>{
+            $.ajax({
+                url:"hello.txt",
+                type:"GET",
+                dataType:"text",
+                success:func1,
+                error:func2,
+                complete:func3
+            })
+        });
+
+        $('#btn02').on('click',()=>{
+            $.get('hello.txt',func1);
+        });
+
+        $('#btn03').on('click',()=>{
+            $.post('hello.txt','나 데이따라고오오',(response)=>{func1();},'text');
+        });
+
+        $('#btn04').on('click',()=>{
+            $('#main').load('hello.txt',function(res,stat,xhr){
+                if(stat =='success'){
+                    func1(res);
+                }else{
+                    fun2(xhr,stat,xhr.statusText);
+                }
+
+            });
+        });
+
+        getData();
+    </script>
+</body>
+</html>
